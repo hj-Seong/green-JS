@@ -25,6 +25,33 @@
         }
         alert(sum)
 
+        // do while문 실습
+        let pw ='green';
+        let count = 0;
+        let user;
+        do {
+            user = prompt("비밀번호를 입력하세요")
+            count++;
+        } while (pw != user && count<5 )
+        alert(count+"회 시도하였습니다")
+
+        // break, continue
+        let num1 = 1;
+        while(true) {
+            if ( num1 > 10) {
+                break;
+            }
+            document.write(num1);
+            num1 ++;
+        }
+
+        for (let i = 1 ; i<=10 ; i++) {
+            if (i%3 == 0) {
+                continue;
+            }
+            document.write(`<p>${i}</p>`)
+
+        }
     </script>
 </body>
 </html>
