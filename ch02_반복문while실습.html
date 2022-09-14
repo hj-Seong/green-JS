@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num = prompt("10+10?");
+        while ( num != "20") {
+            num = prompt("10+10?");
+        }
+        alert("정답입니다");
+
+        // 0이 입력될때까지 숫자를 다 더하는 while문
+        let number = prompt("0을 입력하면 입력한 모든 수를 더합니다");
+        let sum = 0;
+        while (number != "0") {
+            if ( !isNaN( Number(number) ) ) {
+                sum += Number(number);
+            }
+            number = prompt("0을 입력하면 입력한 모든 수를 더합니다");
+        }
+        alert(sum)
+
+    </script>
+</body>
+</html>
