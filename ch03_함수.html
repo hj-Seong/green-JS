@@ -113,6 +113,9 @@
         console.log( count(3) );
         let returnNum = count(5);
 
+        // 함수를 선언하기전에 호출
+        intro()
+
         // 함수 선언
         function intro() {
             document.write("<p>안녕하세요. 반갑습니다</p>")
@@ -144,6 +147,40 @@
         document.write( add(5) )
 
         argument("hi");
+
+        // 변수에 함수를 할당해서 사용하고있기에, 
+        // 변수를 선언하지 않으면, 사용할수 없다.
+        //printName();
+
+        // 이름없는 함수를 사용하는 방법 : 함수 표현식
+        let printName = function(name) {
+            document.write(name)
+            return name
+        }
+        // 변수에 할당한 함수를 호출
+        printName("홍길동");
+
+        // 함수 표현식 : 함수 형식은 동일하나 이름없이 변수에 할당.
+        let sub = function(num1, num2) {
+            let num = num1 - num2;
+            return num;
+        }
+        document.write( sub(5,10))
+
+        // 함수 표현식 사용 예
+        if(true) {
+            let printNum = function(num){
+                document.write(`<li>${num}</li>`)
+            }
+            for(let i=0; i<10; i++) {
+                //함수
+                printNum(i);
+            }
+        }
+        // 함수표현식으로 작성한 경우, 작성한 블록이 아닌 곳에서 호출할수 없다.
+        // let 키워드의 특징.
+        // printNum(12);
+
     </script>
 </body>
 </html>
