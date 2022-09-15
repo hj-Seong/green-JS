@@ -91,6 +91,13 @@
             return sum;
         }
 
+        // 화살표함수
+        let subArrow = (a,b) => a-b; // { return a-b}
+        
+        // 함수표현식
+        let subfucn = function(a,b) {
+            return a-b;
+        }
 
     </script>
 </head>
@@ -208,6 +215,8 @@
             return sum;
         }
         document.write( arrowMultiReturn(3,5))
+
+        document.write(subArrow(4,6))
     </script>
 </body>
 </html>
