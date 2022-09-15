@@ -18,6 +18,11 @@
         function introNameReturn(name) {
             return `안녕하세요 ${name}입니다. 반갑습니다`;
         }
+        // 명시적 함수 - 매개변수/실행내용/리턴 있음
+        function introNameReturnLog(name) {
+            console.log("함수가 출력되었습니다");
+            return `안녕하세요 ${name}입니다. 반갑습니다`
+        } 
     </script>
 </head>
 <body>
@@ -49,8 +54,11 @@
         // head에 선언한 명시적 함수를 호출할때는 body-script에서 호출
         hi();
         introName("홍길동");
+        
         // 함수의 return 값을 사용하기 위해서, 변수에 할당하거나 값을 출력
         document.write( introNameReturn("성춘향") );
+        document.write( introNameReturnLog("홍길동") );
+
     </script>
 </body>
 </html>
