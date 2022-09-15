@@ -192,7 +192,7 @@
         // function 대신 => 를 사용한다.
 
         // 1. 매개변수가 없고, return이 없는 함수
-        let arrowNoVar = () => { document.write("매개변수와 return이 없다") };
+        let arrowNoVar = () =>  document.write("매개변수와 return이 없다") ;
         arrowNoVar();
         
         // 2. 매개변수가 1개 있고, return이 없는 함수
@@ -217,6 +217,32 @@
         document.write( arrowMultiReturn(3,5))
 
         document.write(subArrow(4,6))
+
+        // 함수 안에 함수를 인수로 넣기
+        function funcVar(func) {
+            document.write('매개변수로 받아온 함수를 실행합니다')
+            func();
+        }
+        // 함수를 인수값으로 넣어주기
+        funcVar( function(){
+            document.write("익명함수 통해 넣어준 함수입니다")
+        } );
+
+        // confirm 확인
+        // console.log(confirm("확인"));
+        // 함수 선언
+        function ask(question, yes, no) {
+            if(confirm(question)) 
+                yes(); // 받아온 함수 실행
+            else
+                no(); // 받아온 함수 실행
+        }
+
+        ask("동의하십니까",
+            () =>  alert("동의하셨습니다."),
+            () =>  alert("취소버튼을 누르셨습니다.")
+        );
+
     </script>
 </body>
 </html>
