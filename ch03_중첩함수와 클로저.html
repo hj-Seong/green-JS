@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 중첩함수 > 함수 안에 함수가 들어가있는 형태
+        function f() { // 감싸고 있는 함수
+            let value = 123;
+            // 함수 안에있는 함수는 호이스팅 되지않고 함수 안에서만 사용할수 있다
+            function g() { // 함수안에 생성된 함수
+                alert(value)
+            }
+            g(); // f() 함수안에서 호출
+        }
+
+        // 중첩함수를 실행하기위해 감싸고 있는 함수 호출
+        f();
+        // g(); // 함수안에 있는 함수는 호출할수 없다.
+
+        function add (a,b) {
+            let sum = a+b;
+            function printNum() {
+                document.write(sum)
+            }
+            printNum();
+        }
+        add(5,6);
+    </script>
+</body>
+</html>
