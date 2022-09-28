@@ -16,6 +16,11 @@
         <li>2</li>
         <li>3</li>
     </ul>
+    <form id="form">
+        <label for="">이름</label>
+        <input type="text" id="name">
+    </form>
+
 
     <script>
         // DOM 선택 메소드
@@ -25,7 +30,15 @@
         // return을 통해서 요소를 생성, 변수에 할당해서 사용할수 있다
         // 생성만하고 HTML문서에 추가하지는 않는다.
         document.createElement("h1")
-        
+
+        // DOM 요소 속성 변경
+        // 문서객체에 접근해서 속성을 바꿀 수 있다.
+        let liTag = document.querySelectorAll("ul li"); // 요소 선택
+        // 여러개의 요소는 배열에 들어가 있음으로 한번에 접근하기위해 for문 사용
+        for (let i = 0 ; i<liTag.length ; i++) { 
+            liTag[i].innerHTML = "요소의 내용을 한번에 수정" // 요소 속성 수정
+        }
+
     </script>
 </body>
 </html>
