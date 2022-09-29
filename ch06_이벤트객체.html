@@ -55,7 +55,16 @@
         );
 
         // 3. 만들어진 함수에 인수를 추가적으로 넣기위해 익명함수로 감싼 함수
-
+        document.querySelector("#changetext").addEventListener(
+            "click",
+            function(e) {
+                changeSize(e, 25);
+            }
+        );
+        function changeSize(e, size) {
+            console.log(e.target.style.fontSize);
+            e.target.style.fontSize = size+"px";
+        }
 
     </script>
 </body>
