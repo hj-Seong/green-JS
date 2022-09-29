@@ -8,6 +8,14 @@
 </head>
 <body>
     <p id="text">눌러주세요</p>
+
+    <ol>
+        <li id="first_list">
+            <input type="checkbox" id="checkbox">
+            첫번째 리스트입니다.
+        </li>
+    </ol>
+
     <script>
         const text = document.querySelector("#text");
         text.addEventListener("click", change);
@@ -20,6 +28,17 @@
             }else {
                 textDOM.style.color = 'black';
                 textDOM.innerHTML = "눌러주세요"
+            }
+        }
+
+        // 체크박스에 체크시, 글자색 변경
+        const checkbox = document.querySelector("#checkbox");
+        checkbox.addEventListener("click", changeText);
+        function changeText(e) {
+            if(e.target.checked) {
+                e.target.parentNode.style.color = "lightgray";
+            }else {
+                e.target.parentNode.style.color = "black";
             }
         }
     </script>
